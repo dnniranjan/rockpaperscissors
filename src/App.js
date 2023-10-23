@@ -51,7 +51,8 @@ class App extends Component {
   onclickOfOption = (id, imageUrl) => {
     this.setState(prevState => ({gameResult: !prevState.gameResult}))
     const newList = [...choicesList]
-    newList.sort(() => Math.random() - 0.5)
+    newList.sort(() => Math.floor(Math.random() * choicesList.length))
+
     this.setState({oppUrl: newList[0].imageUrl})
     this.setState({userUrl: imageUrl})
     const userId = id

@@ -15,15 +15,11 @@ const GameResult = props => {
   const onCLickPlay = () => {
     onclickReset()
   }
-  const userOptionRender = () => {
-    console.log(userUrl)
-    return <Image src={userUrl} alt="your choice" />
-  }
+  const userOptionRender = () => <Image src={userUrl} alt="your choice" />
 
-  const opponentOptionRender = () => {
-    console.log(oppUrl)
-    return <Image src={oppUrl} alt="opponent choice" />
-  }
+  const opponentOptionRender = () => (
+    <Image src={oppUrl} alt="opponent choice" />
+  )
 
   return (
     <MainResult>
